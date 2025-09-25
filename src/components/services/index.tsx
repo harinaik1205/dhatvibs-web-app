@@ -11,10 +11,13 @@ const OurServices = () => {
           Our Services
         </h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-self-center gap-10">
-          {MAIN_SERVICES.map((service) => (
+          {MAIN_SERVICES.map((service, index) => (
             <li
               key={service.id}
               className="relative h-[340px] rounded-lg group cursor-pointer"
+              style={{
+                animationDelay: `${index * 100}ms`,
+              }}
             >
               <img
                 src={service.imageURL}
@@ -27,7 +30,21 @@ const OurServices = () => {
                 </span>
               </div>
 
-              <div className="hidden group-hover:block absolute inset-0 z-20 bg-black/10 p-4">
+              <div className="absolute inset-0 z-20 bg-black/10 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-full h-full bg-primary-500 flex flex-col items-center justify-center gap-3">
+                  <span className="text-2xl text-white font-semibold text-center">
+                    {service.label}
+                  </span>
+                  <Link
+                    to={"/services"} // Consider individual service paths
+                    className="h-12 w-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors duration-200"
+                    aria-label={`Learn more about ${service.label}`}
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+              {/* <div className="hidden group-hover:block absolute inset-0 z-20 bg-black/10 p-4">
                 <div className="w-full h-full bg-primary-500 flex flex-col items-center justify-center gap-3">
                   <span className="text-2xl text-white font-semibold text-center">
                     {service.label}
@@ -40,7 +57,7 @@ const OurServices = () => {
                     <ArrowRight />
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </li>
           ))}
         </ul>
