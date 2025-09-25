@@ -11,13 +11,10 @@ const OurServices = () => {
           Our Services
         </h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-self-center gap-10">
-          {MAIN_SERVICES.map((service, index) => (
+          {MAIN_SERVICES.map((service) => (
             <li
               key={service.id}
               className="relative h-[340px] rounded-lg group cursor-pointer"
-              style={{
-                animationDelay: `${index * 100}ms`,
-              }}
             >
               <img
                 src={service.imageURL}
