@@ -1,7 +1,6 @@
 import Container from "../Container";
 import { MAIN_SERVICES } from "../../constants/data";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import ServiceItem from "./ServiceItem";
 
 const OurServices = () => {
   return (
@@ -12,50 +11,7 @@ const OurServices = () => {
         </h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-self-center gap-10">
           {MAIN_SERVICES.map((service) => (
-            <li
-              key={service.id}
-              className="relative h-[340px] rounded-lg group cursor-pointer"
-            >
-              <img
-                src={service.imageURL}
-                alt={service.label}
-                className="w-full h-full object-cover rounded-lg"
-              />
-              <div className="w-full h-full flex items-center justify-center px-6 absolute top-0 z-10">
-                <span className="text-4xl text-white font-semibold text-center">
-                  {service.label}
-                </span>
-              </div>
-
-              <div className="absolute inset-0 z-20 bg-black/10 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-full h-full bg-primary-500 flex flex-col items-center justify-center gap-3">
-                  <span className="text-2xl text-white font-semibold text-center">
-                    {service.label}
-                  </span>
-                  <Link
-                    to={"/services"} // Consider individual service paths
-                    className="h-12 w-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors duration-200"
-                    aria-label={`Learn more about ${service.label}`}
-                  >
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </div>
-              </div>
-              {/* <div className="hidden group-hover:block absolute inset-0 z-20 bg-black/10 p-4">
-                <div className="w-full h-full bg-primary-500 flex flex-col items-center justify-center gap-3">
-                  <span className="text-2xl text-white font-semibold text-center">
-                    {service.label}
-                  </span>
-
-                  <Link
-                    to={"/services"}
-                    className="h-12 w-12 rounded-full bg-white flex items-center justify-center"
-                  >
-                    <ArrowRight />
-                  </Link>
-                </div>
-              </div> */}
-            </li>
+            <ServiceItem key={service.id} service={service} />
           ))}
         </ul>
       </Container>
