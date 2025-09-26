@@ -7,6 +7,7 @@ interface ServiceItemProps {
     id: string;
     label: string;
     imageURL: string;
+    services: string[];
   };
 }
 
@@ -39,9 +40,14 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service }) => {
         } transition-opacity duration-300`}
       >
         <div className="w-full h-full bg-primary-500 flex flex-col items-center justify-center gap-3">
-          <span className="text-2xl text-white font-semibold text-center">
-            {service.label}
-          </span>
+          {service.services.map((text) => (
+            <p
+              key={text}
+              className="text-lg text-white font-semibold text-center"
+            >
+              {text}
+            </p>
+          ))}
           <Link
             to={"/services"}
             className="h-12 w-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors duration-200"
