@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 interface ServiceItemProps {
@@ -11,8 +11,17 @@ interface ServiceItemProps {
 }
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ service }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleToggle = () => {
+    setIsActive((prev) => !prev);
+  };
+
   return (
-    <li className="relative h-[340px] rounded-lg group cursor-pointer">
+    <li
+      onClick={handleToggle}
+      className="relative h-[340px] rounded-lg group cursor-pointer"
+    >
       <img
         src={service.imageURL}
         alt={service.label}
@@ -24,7 +33,11 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service }) => {
         </span>
       </div>
 
-      <div className="absolute inset-0 z-20 bg-black/10 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div
+        className={`absolute inset-0 z-20 bg-black/10 p-4 opacity-0 group-hover:opacity-100 ${
+          isActive ? "opacity-100" : ""
+        } transition-opacity duration-300`}
+      >
         <div className="w-full h-full bg-primary-500 flex flex-col items-center justify-center gap-3">
           <span className="text-2xl text-white font-semibold text-center">
             {service.label}

@@ -1,6 +1,6 @@
 import OurServices from "../components/services";
 import Banner from "../components/Banner";
-import AboutSection from "../components/AbouSection";
+import AboutSection from "../components/AboutSection";
 import { Link } from "react-router-dom";
 
 const BANNER_IMAGE_URL =
@@ -8,7 +8,7 @@ const BANNER_IMAGE_URL =
 
 const Home = () => {
   return (
-    <div className="pb-10">
+    <div className="pb-20">
       <Banner imageURL={BANNER_IMAGE_URL} />
 
       <AboutSection />

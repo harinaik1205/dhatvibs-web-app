@@ -3,7 +3,7 @@ import ContactUsForm from "../components/contact/ContactUsForm";
 
 const Contact = () => {
   return (
-    <div className="pb-10">
+    <div className="pb-20">
       <ContactUsForm />
 
       <ContactDetails />

@@ -13,7 +13,7 @@ const FeatureItem = ({
     <div className="w-6 h-6 rounded-full bg-[#c9c9c9]/50 flex items-center justify-center">
       <Icon className="text-primary-500" size={20} />
     </div>
-    <span className="text-xl font-semibold">{text}</span>
+    <span className="text-xl font-semibold text-start">{text}</span>
   </li>
 );
 
@@ -49,13 +49,13 @@ const AboutSection = () => (
             adapt, and thrive in the digital era.
           </p>
 
-          <ul className="w-full space-y-3 mt-3">
+          <ul className="w-full flex flex-col sm:items-center md:items-start gap-3 mt-3">
             <FeatureItem icon={Check} text="Custom Software Development" />
-            <FeatureItem icon={Check} text="24/7 Technical Support" />
+            <FeatureItem icon={Check} text="Technical & Voice Support" />
             <FeatureItem icon={Check} text="Training & Skill Development" />
           </ul>
 
-          <div className="flex items-center gap-6 mt-3">
+          <div className="flex flex-col xs:flex-row items-center gap-6 mt-3">
             <Link to="/services">
               <button className="px-6 py-2 bg-gradient-to-r from-primary-500 via-green-400 to-primary-500 rounded-full text-base text-white tracking-wide font-medium cursor-pointer hover:shadow-xl transition duration-200">
                 Discover More

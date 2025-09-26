@@ -19,12 +19,12 @@ const Sidebar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
       ></div>
 
       <div
-        className={`md:hidden fixed top-0 right-0 z-50 h-full w-full max-w-[270px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out overflow-x-auto ${
+        className={`md:hidden fixed top-0 right-0 z-50 h-screen w-full max-w-[270px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out overflow-x-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="w-full h-full border-l-3 border-primary-500">
-          <div className="h-[103px] pr-4 flex items-center justify-between border-b border-gray-200">
+        <div className="h-screen border-l-3 border-primary-500 overflow-hidden overflow-y-auto">
+          <div className="h-[103px] pr-4 flex items-center justify-between border-b border-gray-200 box-border">
             <div className="w-[100px] h-[100px]">
               <img src={LOGO_URL} alt="" className="object-cover" />
             </div>

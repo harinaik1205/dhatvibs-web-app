@@ -7,8 +7,8 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ imageURL }) => (
   <div className="relative w-full h-[calc(100vh-103px)] flex items-center justify-center">
-    <div className="max-w-3xl px-6 flex flex-col items-center selection:bg-primary-500">
-      <h1 className="text-4xl text-white tracking-tight sm:text-5xl lg:text-6xl font-semibold text-center">
+    <div className="max-w-3xl px-6 flex flex-col items-center selection:bg-primary-500  z-20">
+      <h1 className="text-4xl text-white sm:text-5xl lg:text-6xl font-semibold text-center">
         Innovate with DBS: Your Digital Transformation Partner
       </h1>
       <Link
@@ -25,6 +25,7 @@ const Banner: React.FC<BannerProps> = ({ imageURL }) => (
     <div className="absolute inset-0 -z-10">
       <img src={imageURL} alt="Banner" className="w-full h-full object-cover" />
     </div>
+    <div className="absolute inset-0 z-10 bg-black/50"></div>
   </div>
 );
 
