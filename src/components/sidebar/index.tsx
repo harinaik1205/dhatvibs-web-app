@@ -50,25 +50,25 @@ const Sidebar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                 );
               })}
             </ul>
-            <div className="flex-1 flex flex-col bg-primary-500 px-6 py-5">
+            <div className="flex-1 flex flex-col bg-primary-500 px-6 py-5 selection:bg-blue-500">
               <h2 className="text-xl text-white font-semibold mb-5">
                 Contact Info
               </h2>
               <div className="space-y-5">
                 <div className="flex items-center gap-3">
                   <MapPin size={70} className="text-text-primary" />
-                  <span className="text-sm text-white">
+                  <span className="text-md text-white">
                     PB House, 1st Floor, HUDA Techno Enclave, Street No.7,
                     Madhapur, Hyderabad, Telangana 500081
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail size={20} className="text-text-primary" />
-                  <span className="text-sm text-white">info@dhatvibs.com</span>
+                  <span className="text-md text-white">info@dhatvibs.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <PhoneCall size={20} className="text-text-primary" />
-                  <span className="text-sm text-white">+91 40 45374487</span>
+                  <span className="text-md text-white">+91 40 45374487</span>
                 </div>
               </div>
             </div>

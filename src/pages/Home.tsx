@@ -24,7 +24,7 @@ const Home = () => {
         />
 
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center bg-black/40">
-          <p className="text-xl text-white max-w-2xl">
+          <p className="text-xl md:text-2xl text-white max-w-2xl">
             Partner with Dhatvi Business Solutions, and empower your business
             with innovative software, seamless support, and future-ready digital
             solutions, all under one roof.

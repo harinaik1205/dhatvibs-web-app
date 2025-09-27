@@ -8,9 +8,9 @@ const Logo = () => (
       alt="Logo"
       className="object-contain h-[100px] w-[100px]"
     />
-    <div className="hidden md:block ml-4">
-      <h1 className="text-text-primary text-3xl lg:text-4xl tracking-wide font-bold border-b-2 border-primary-500 pb-2">
-        Dhatvi
+    <div className="hidden md:block ">
+      <h1 className="text-text-primary text-3xl lg:text-4xl font-bold border-b-2 border-primary-500 pb-2">
+        DhaTvi
       </h1>
       <p className="uppercase text-sm text-text-primary font-semibold">
         Business Solutions Pvt.ltd.
