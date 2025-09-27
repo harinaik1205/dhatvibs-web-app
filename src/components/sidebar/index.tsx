@@ -1,5 +1,5 @@
-import { Mail, MapPin, PhoneCall, X } from "lucide-react";
 import React from "react";
+import { Mail, MapPin, PhoneCall, X } from "lucide-react";
 import SidebarItem from "./SidebarItem";
 import { LOGO_URL, NAV_ITEMS } from "../../constants/data";
 
@@ -23,7 +23,7 @@ const Sidebar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="h-screen border-l-3 border-primary-500 overflow-hidden overflow-y-auto">
+        <div className="h-full border-l-3 border-primary-500">
           <div className="h-[103px] pr-4 flex items-center justify-between border-b border-gray-200 box-border">
             <div className="w-[100px] h-[100px]">
               <img src={LOGO_URL} alt="" className="object-cover" />
@@ -36,7 +36,7 @@ const Sidebar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
             </button>
           </div>
 
-          <div className="h-[calc(100vh-103px)] flex flex-col justify-between">
+          <div className="h-[calc(100vh-103px)] flex flex-col">
             <ul className="px-6 pt-6">
               {NAV_ITEMS.map((navItem, index) => {
                 return (
@@ -50,11 +50,11 @@ const Sidebar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                 );
               })}
             </ul>
-            <div className="h-fit bg-primary-500 px-6 py-5">
+            <div className="flex-1 flex flex-col bg-primary-500 px-6 py-5">
               <h2 className="text-xl text-white font-semibold mb-5">
                 Contact Info
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div className="flex items-center gap-3">
                   <MapPin size={70} className="text-text-primary" />
                   <span className="text-sm text-white">

@@ -24,8 +24,10 @@ const Home = () => {
         />
 
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center bg-black/40">
-          <p className="text-5xl sm:text-6xl text-white max-w-2xl">
-            Let’s Make the Most Unique ideas Together
+          <p className="text-xl text-white max-w-2xl">
+            Partner with Dhatvi Business Solutions, and empower your business
+            with innovative software, seamless support, and future-ready digital
+            solutions, all under one roof.
           </p>
           <Link to={"/contact"}>
             <button className="bg-primary-500 px-6 py-2 rounded-full text-lg text-white font-semibold mt-10 cursor-pointer hover:bg-green-600 transition duration-300">
